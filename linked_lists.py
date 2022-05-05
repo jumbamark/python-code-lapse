@@ -33,3 +33,12 @@
 
 # Linked lists are not represented by C arrays under the hood, Nodes are simply stored in sections of random memory with that section of random memory containing a pointer to the data stored in that node and a pointer to the next node in the linked list
 # Nodes are just objects in memory with an instance attribute for the data and an instance attribute that acts as a pointer to the next node
+# These nodes are often created from a class or a data class, bec no arrays are involved lists don't suffer from the same limitations as arrays such as needing to be resized. they really just a series of random objects in memory pointing to one another
+# Where linked lists shine is inserting elements at the beginning or the end
+
+# If you wanna insert a new node at the beginning all I have to do is create the new node, redirect the "Next" attribute to the previous head and change the head to point to the new node (no resizing or touching most of the other nodes)
+# Adding at the end however requires traversing through the entire linked list until I reach the entire end node and the create a new Node and then point the previous end node to it and make the new node point to None
+# The time it takes to traverse the linked list grows with the number of elements so accessing elements is an O(N) operation
+# The reason why its quick to insert new nodes at the end is because it's common to store a separate pointer to the end node of a linked list so you don't have to keep traversing the whole thing every time
+# The processing of creating a new node and redirecting pointers is always an O(1) operation
+# Linked list dont require resizing so we dont suffer the performance penalty associated with resizing
