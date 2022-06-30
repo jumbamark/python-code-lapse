@@ -211,7 +211,7 @@ The solution lies in __static methods__, refer to `instance-count_staticmethods.
 
     class Cat(Pet):
         _class_info = "all kinds of cats"
-
+    ```
     ```python
     Pet.about()
     Dog.about()
