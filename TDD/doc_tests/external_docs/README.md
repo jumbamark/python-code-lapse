@@ -1,0 +1,2 @@
+- Mixing tests in with regualar code is not the only way to use doctest
+- Examples embedded in external project documentation files, such as reStructuredText files can be used as well

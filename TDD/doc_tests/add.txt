@@ -1,0 +1,15 @@
+The ``add`` module
+==================
+
+Using ``add``
+-------------
+
+This is an add text file in restructuredText format. First import
+``add`` from the ``add`` module.
+
+	>>> from add import simple_addition
+
+Now use it:
+	
+	>>> simple_addition(5, 5)
+	14
